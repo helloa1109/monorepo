@@ -2,33 +2,29 @@
 
 A modern monorepo project built with Next.js, TypeScript, Tailwind CSS, and Turborepo.
 
-## 🏛️ 아키텍처 및 설계 철학
+### 1. Monorepo with Turborepo + pnpm Workspaces
 
-이 프로젝트는 단순히 여러 기술을 모아놓은 것이 아니라, 모던 웹 개발의 일반적인 문제들을 해결하기 위해 신중하게 설계된 아키텍처입니다. 핵심적인 설계 원칙과 그 이유는 다음과 같습니다.
+* **Why**: As applications grow, managing shared logic, UI components, and configurations across multiple repositories becomes exponentially complex. A monorepo architecture centralizes this management, and Turborepo enhances it with high-performance build tooling.
+* **Quantitative Benefits**:
+    * **Reduced Duplication**: By sharing packages like `@mono/ui` and `@mono/core`, we prevent an estimated **70-80% of code duplication** that would occur in separate repositories.
+    * **Optimized CI/CD**: Turborepo's remote caching and incremental builds can reduce deployment times by **up to 90%** on subsequent builds, as it only rebuilds packages affected by a change.
+    * **Efficient Dependency Management**: `pnpm` utilizes a content-addressable store for node_modules, significantly reducing disk space usage and speeding up dependency installation by **2-3x** compared to traditional package managers.
 
-### 1. Turborepo와 pnpm Workspace 기반의 모노레포
+### 2. Decoupled Packages (`ui`, `core`, `types`)
 
-* **선택 이유**: 애플리케이션이 복잡해질수록 여러 레포지토리에서 공통 로직, UI 컴포넌트, 설정을 관리하는 것은 기하급수적으로 어려워집니다. 모노레포는 이러한 관리를 중앙화하며, Turborepo는 고성능 빌드 시스템을 통해 그 효율을 극대화합니다.
-* **정량적 이점**:
-    * **코드 중복 감소**: `@mono/ui`, `@mono/core`와 같은 공유 패키지를 통해, 여러 레포지토리를 사용할 때 발생할 수 있는 코드 중복을 **70-80% 이상 방지**합니다.
-    * **최적화된 CI/CD**: Turborepo의 원격 캐시와 증분 빌드 기능은 변경된 패키지만을 재빌드하므로, 두 번째 배포부터 빌드 시간을 **최대 90%까지 단축**시킬 수 있습니다.
-    * **효율적인 의존성 관리**: `pnpm`은 디스크 공간 사용량을 획기적으로 줄이고, 기존 패키지 매니저 대비 **2~3배 빠른** 속도로 의존성을 설치합니다.
+* **Why**: A key principle of scalable architecture is **Separation of Concerns**. Each package has a single, clear responsibility.
+    * `@mono/ui`: A dedicated design system. It ensures a consistent user experience across all applications and allows UI development to happen in isolation, documented and tested via Storybook.
+    * `@mono/core`: Encapsulates all business logic, abstracting it away from the presentation layer. This makes the logic reusable and easily testable.
+    * `@mono/types`: Provides a single source of truth for data structures, ensuring type safety and reducing integration errors between the frontend and backend.
+* **Impact**: This structure makes the system highly **modular and scalable**. A new application (e.g., a mobile app or another web service) can be added to the `apps` directory and immediately leverage all the existing shared packages, drastically reducing development time.
 
-### 2. 역할이 분리된 패키지 구조
+### 3. Centralized Tooling Configuration
 
-* **선택 이유**: 확장 가능한 아키텍처의 핵심 원칙은 **관심사 분리(Separation of Concerns)**입니다. 각 패키지는 명확하고 단일한 책임을 가집니다.
-    * `@mono/ui`: 독립된 디자인 시스템 역할을 합니다. 모든 애플리케이션에서 일관된 사용자 경험을 보장하며, Storybook을 통해 UI 컴포넌트를 독립적으로 개발하고 문서화할 수 있습니다.
-    * `@mono/core`: 모든 비즈니스 로직을 캡슐화하여 프레젠테이션 계층으로부터 분리합니다. 이를 통해 로직의 재사용성과 테스트 용이성을 높입니다.
-    * `@mono/types`: 데이터 구조에 대한 단일 진실 공급원(Single Source of Truth) 역할을 하여, 프로젝트 전반의 타입 안정성을 보장하고 컴포넌트 간 통합 오류를 줄입니다.
-* **기대 효과**: 이 구조는 시스템을 매우 **모듈화되고 확장 가능하게** 만듭니다. `apps` 디렉토리에 새로운 애플리케이션을 추가할 때, 기존 공유 패키지를 즉시 재사용하여 개발 시간을 획기적으로 단축할 수 있습니다.
-
-### 3. 중앙화된 개발 도구 설정
-
-* **선택 이유**: 대규모 코드 베이스에서 일관된 코드 품질과 표준을 유지하는 것은 매우 중요합니다.
-* **구현 방식**:
-    * `tools/eslint-config`: 모든 패키지와 앱이 상속받는 단일 ESLint 설정을 통해 통일된 코딩 스타일을 강제합니다.
-    * **루트 `tsconfig.json`**: 기본 TypeScript 설정과 경로 별칭(`@mono/ui` 등)을 제공하여 코드 가독성과 유지보수성을 높입니다. 각 워크스페이스는 이 설정을 확장하여 중복을 최소화합니다.
-* **기대 효과**: 설정의 파편화를 방지하고, 새로운 패키지가 추가될 때마다 프로젝트의 품질 표준을 자동으로 따르도록 보장합니다. 이는 새로운 개발자의 적응 비용을 낮추는 효과도 있습니다.
+* **Why**: Maintaining consistent code quality and standards across a large codebase is crucial.
+* **Implementation**:
+    * `tools/eslint-config`: A single ESLint configuration is inherited by all packages and applications, enforcing a unified coding style.
+    * **Root `tsconfig.json`**: A base TypeScript configuration provides shared compiler options and path aliases (e.g., `@/`, `@mono/ui`), improving code readability and maintainability. Each workspace extends this configuration, minimizing boilerplate.
+* **Benefit**: This approach reduces configuration drift and ensures that any new package automatically adheres to the project's quality standards, lowering the barrier to entry for new developers.
 
 ## 🌐 Live Deployments
 
