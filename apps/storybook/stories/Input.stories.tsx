@@ -40,6 +40,7 @@ export const WithLabel: Story = {
     type: 'email',
     placeholder: 'Enter your email',
     size: 'md',
+    maxLength: 50,
   },
 };
 
@@ -50,6 +51,7 @@ export const WithError: Story = {
     placeholder: 'Enter password',
     error: 'Password must be at least 8 characters',
     size: 'md',
+    maxLength: 20,
   },
 };
 
@@ -58,6 +60,7 @@ export const Small: Story = {
     label: 'Small Input',
     placeholder: 'Small size',
     size: 'sm',
+    maxLength: 10,
   },
 };
 
@@ -66,6 +69,7 @@ export const Large: Story = {
     label: 'Large Input',
     placeholder: 'Large size',
     size: 'lg',
+    maxLength: 100,
   },
 };
 
@@ -75,6 +79,7 @@ export const Disabled: Story = {
     placeholder: 'This is disabled',
     disabled: true,
     size: 'md',
+    maxLength: 30,
   },
 };
 
@@ -87,7 +92,7 @@ export const Interactive: Story = {
         <Input
           {...args}
           value={value}
-          onChange={setValue}
+          onChange={(e) => setValue(e.target.value)}
           label="Interactive Input"
           placeholder="Type something..."
         />

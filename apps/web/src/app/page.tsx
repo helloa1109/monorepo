@@ -20,6 +20,7 @@ export default function Home() {
                     type="email"
                     placeholder="Enter your email"
                     size="md"
+                    maxLength={50}
                   />
                 </div>
                 

@@ -24,7 +24,11 @@
     "eslint-plugin-react-hooks": "^7.0.0",
     "prettier": "^3.0.3",
     "turbo": "^1.10.12",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@mono/eslint-config": "workspace:*",
+    "@mono/types": "workspace:*",
+    "@mono/ui": "workspace:*",
+    "@mono/core": "workspace:*"
   },
   "packageManager": "pnpm@8.10.0",
   "engines": {
