@@ -1,5 +1,5 @@
-import React from 'react';
 import { Size } from '@mono/types';
+import React from 'react';
 
 interface ButtonProps {
   children: React.ReactNode;

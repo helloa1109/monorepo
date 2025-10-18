@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { Input } from '@mono/ui';
+import type { Meta, StoryObj } from '@storybook/react';
 import { useState } from 'react';
 
 const meta: Meta<typeof Input> = {
@@ -80,7 +80,7 @@ export const Disabled: Story = {
 
 // Interactive example with state
 export const Interactive: Story = {
-  render: (args) => {
+  render: function InteractiveRender(args) {
     const [value, setValue] = useState('');
     return (
       <div className="w-80">

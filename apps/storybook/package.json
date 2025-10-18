@@ -5,15 +5,18 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@mono/ui": "workspace:*",
     "@mono/types": "workspace:*",
+    "@mono/ui": "workspace:*",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@mono/eslint-config": "workspace:*",
     "@storybook/addon-essentials": "^7.5.0",
     "@storybook/addon-interactions": "^7.5.0",
     "@storybook/addon-links": "^7.5.0",
@@ -24,6 +27,9 @@
     "@storybook/testing-library": "^0.2.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.1",
+    "@typescript-eslint/parser": "^8.46.1",
+    "eslint": "^8.50.0",
     "storybook": "^7.5.0",
     "typescript": "^5.2.2",
     "vite": "^4.4.0"
