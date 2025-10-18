@@ -1,6 +1,6 @@
 // API client utilities
 export const apiClient = {
-  baseURL: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api',
+  baseURL: process.env.NEXT_PUBLIC_API_URL,
   
   async get<T>(endpoint: string): Promise<T> {
     const response = await fetch(`${this.baseURL}${endpoint}`);

@@ -4,7 +4,7 @@
     "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "types": ["react", "react-dom"]
+    "types": ["react", "react-dom", "node"]
   },
   "include": [
     "src/**/*",
