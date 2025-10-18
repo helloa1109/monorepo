@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['../../tools/eslint-config'],
+  extends: ['next/core-web-vitals', '../../tools/eslint-config'],
   rules: {
     // Next.js specific rules
     'react/no-unescaped-entities': 'off',
