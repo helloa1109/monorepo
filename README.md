@@ -30,6 +30,15 @@ A modern monorepo project built with Next.js, TypeScript, Tailwind CSS, and Turb
     * **루트 `tsconfig.json`**: 기본 TypeScript 설정과 경로 별칭(`@mono/ui` 등)을 제공하여 코드 가독성과 유지보수성을 높입니다. 각 워크스페이스는 이 설정을 확장하여 중복을 최소화합니다.
 * **기대 효과**: 설정의 파편화를 방지하고, 새로운 패키지가 추가될 때마다 프로젝트의 품질 표준을 자동으로 따르도록 보장합니다. 이는 새로운 개발자의 적응 비용을 낮추는 효과도 있습니다.
 
+## 🌐 Live Deployments
+
+You can view the live deployments of this project on Vercel:
+
+-   **Web Application**: [https://monorepo-web-weld.vercel.app/](https://monorepo-web-weld.vercel.app/)
+-   **Storybook (UI Components)**: [https://your-storybook-deployment-url.vercel.app/](https://monorepo-storybook-seven.vercel.app/)
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhelloa1109%2Fmonorepo)
+
 ## 🏗️ Project Structure
 
 ```
