@@ -1,6 +1,6 @@
 // apps/web/tailwind.config.ts
 import type { Config } from 'tailwindcss';
-import sharedConfig from '@repo/ui/tailwind.config'; // ui 패키지의 설정을 import 합니다.
+import sharedConfig from '@mono/ui/tailwind.config'; // ui 패키지의 설정을 import 합니다.
 
 const config: Pick<Config, "content" | "presets"> = {
   presets: [sharedConfig], // presets으로 ui 설정을 상속받습니다.
