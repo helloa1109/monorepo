@@ -26,7 +26,7 @@ A modern monorepo project built with Next.js, TypeScript, Tailwind CSS, and Turb
     * **Root `tsconfig.json`**: A base TypeScript configuration provides shared compiler options and path aliases (e.g., `@/`, `@mono/ui`), improving code readability and maintainability. Each workspace extends this configuration, minimizing boilerplate.
 * **Benefit**: This approach reduces configuration drift and ensures that any new package automatically adheres to the project's quality standards, lowering the barrier to entry for new developers.
 
-## 🌐 Live Deployments
+## Live Deployments
 
 You can view the live deployments of this project on Vercel:
 
