@@ -39,6 +39,24 @@ You can view the live deployments of this project on Vercel:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhelloa1109%2Fmonorepo)
 
+## 🚀 Deployment on Vercel
+
+This monorepo is optimized for Vercel deployment. You should create a separate Vercel project for each application in the `apps` directory.
+
+### 1. Web Application (`apps/web`)
+
+-   **Framework Preset**: `Next.js`
+-   **Root Directory**: `apps/web`
+-   **Environment Variables**: Set `NEXT_PUBLIC_API_URL` to your backend API endpoint.
+
+### 2. Storybook (`apps/storybook`)
+
+-   **Framework Preset**: `Storybook`
+-   **Root Directory**: `apps/storybook`
+-   **Build and Output Settings**:
+    -   **Build Command**: `pnpm build-storybook`
+    -   **Output Directory**: `storybook-static`
+
 ## 🏗️ Project Structure
 
 ```
@@ -180,10 +198,7 @@ pnpm --filter @mono/ui build
 
 ## 📝 Next Steps
 
-1. **shadcn/ui 통합**: 고급 UI 컴포넌트 라이브러리
-2. **테스트 설정**: Jest + Testing Library
-3. **ESLint 설정**: 코드 품질 관리
-4. **Vercel 배포**: 자동 배포 설정
+1. **테스트 설정**: Jest + Testing Library
 
 ## 🤝 Contributing
 
