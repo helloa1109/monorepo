@@ -13,3 +13,6 @@ export { cn } from './lib/utils';
 
 // Re-export types
 export type { Size } from '@mono/types';
+
+// Scroll utilities
+export { ScrollReveal } from './utilities/ScrollReveal';
