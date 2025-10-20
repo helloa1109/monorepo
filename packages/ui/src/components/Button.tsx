@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 import { Size } from '@mono/types';
 import { cva, type VariantProps } from 'class-variance-authority';
 import React from 'react';
