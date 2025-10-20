@@ -1,20 +1,21 @@
-import type { Metadata } from 'next';
-import React from 'react';
-import './globals.css';
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'Mono App',
-  description: 'A monorepo application built with Next.js',
+  title: "Monorepo Web App",
+  description: "Modern monorepo with Next.js, TypeScript, and Turborepo",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html lang="ko">
+      <body suppressHydrationWarning className="antialiased">
+        {children}
+      </body>
     </html>
   );
 }
