@@ -16,3 +16,6 @@ export type { Size } from '@mono/types';
 
 // Scroll utilities
 export { ScrollReveal } from './utilities/ScrollReveal';
+
+// Accordion Components
+export * from './components/Accordion';
