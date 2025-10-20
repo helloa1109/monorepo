@@ -2,7 +2,6 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react-hooks/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:import/recommended',
     'prettier',
@@ -15,12 +14,7 @@ module.exports = {
       jsx: true,
     },
   },
-  plugins: [
-    'react',
-    'react-hooks',
-    'jsx-a11y',
-    'import',
-  ],
+  plugins: ['react', 'jsx-a11y', 'import'],
   rules: {
     // React rules
     'react/react-in-jsx-scope': 'off', // Next.js doesn't require React import
