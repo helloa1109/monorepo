@@ -2,7 +2,7 @@
 
 A modern monorepo project built with Next.js, TypeScript, Tailwind CSS, and Turborepo.
 
-### 1. Monorepo with Turborepo + pnpm Workspaces
+### 1. Monorepo with Turborepo + pnpm Workspaces.
 
 * **Why**: As applications grow, managing shared logic, UI components, and configurations across multiple repositories becomes exponentially complex. A monorepo architecture centralizes this management, and Turborepo enhances it with high-performance build tooling.
 * **Quantitative Benefits**:
