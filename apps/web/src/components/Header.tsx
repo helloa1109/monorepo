@@ -1,7 +1,6 @@
 'use client';
 
-import { Button } from '@mono/ui';
-import { ArrowRight } from 'lucide-react';
+import { Button,ArrowRight } from '@mono/ui';
 
 export function Header() {
   return (

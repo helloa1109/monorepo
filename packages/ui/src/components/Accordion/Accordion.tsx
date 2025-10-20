@@ -1,4 +1,3 @@
-// packages/ui/src/components/Accordion/Accordion.tsx
 /* eslint-disable import/order */
 "use client";
 

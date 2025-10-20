@@ -19,3 +19,5 @@ export { ScrollReveal } from './utilities/ScrollReveal';
 
 // Accordion Components
 export * from './components/Accordion';
+
+export * from './icons';
