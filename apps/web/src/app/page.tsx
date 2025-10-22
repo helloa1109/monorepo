@@ -1,17 +1,46 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
+import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
 import { ThirdSection } from '@/components/ThirdSection';
 
 export default function Home() {
+  const [showIntro, setShowIntro] = useState(true);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (showIntro) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+      setIsLoaded(true);
+    }
+    
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showIntro]);
+
   return (
-    <main className="min-h-screen bg-black text-white overflow-x-hidden">
-      <Header />
-      <HeroSection />
-      <SecondSection/>
-      <ThirdSection/>
-    </main>
+    <>
+      {/* 인트로 화면 */}
+      {showIntro && <IntroLoader onComplete={() => setShowIntro(false)} />}
+
+      {/* 메인 콘텐츠 */}
+      <main
+        className={`min-h-screen bg-black text-white overflow-x-hidden transition-opacity duration-1000 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
+      >
+        <Header />
+        <HeroSection />
+        <SecondSection />
+        <ThirdSection />
+      </main>
+    </>
   );
 }
