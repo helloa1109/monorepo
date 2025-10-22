@@ -32,7 +32,7 @@ export function ThirdSection() {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
         {squirrelRoutine.map((item, index) => (
           <ScrollReveal key={index} delay={0.1 * index} direction="up">
-            <Card className="bg-gradient-to-br from-yellow-900/40 to-yellow-800/25 border-yellow-700/60 hover:border-amber-400/70 transition-all duration-500 hover:shadow-lg hover:shadow-amber-400/20 hover:scale-105">
+            <Card className="bg-gradient-to-br from-yellow-900/40 to-yellow-800/25 border-yellow-700/60 hover:border-amber-400/70 transition-all duration-500 hover:shadow-lg hover:shadow-amber-400/20 hover:scale-105 h-full">
               <CardContent className="p-7">
                 <div className="text-amber-400 text-sm font-bold mb-3">
                   {item.time}

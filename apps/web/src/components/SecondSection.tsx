@@ -43,7 +43,7 @@ export function SecondSection() {
       <div className="grid md:grid-cols-2 gap-6">
         {features.map((feature, index) => (
           <ScrollReveal key={index} delay={feature.delay}>
-            <Card className="bg-gradient-to-br from-zinc-900 to-zinc-900/80 border-zinc-800 hover:border-cyan-400/60 transition-all duration-500 group hover:shadow-xl hover:shadow-cyan-400/10 hover:scale-[1.02]">
+            <Card className="bg-gradient-to-br from-zinc-900 to-zinc-900/80 border-zinc-800 hover:border-cyan-400/60 transition-all duration-500 group hover:shadow-xl hover:shadow-cyan-400/10 hover:scale-[1.02] h-full">
               <CardContent className="p-10">
                 <div className={`inline-block ${feature.badgeColor} text-xs font-bold px-4 py-1.5 rounded-full mb-6`}>
                   {feature.badge}
