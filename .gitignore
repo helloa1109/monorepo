@@ -101,3 +101,6 @@ temp/
 
 # Turbo
 .turbo
+
+# PNPM Store
+**/.pnpm-store

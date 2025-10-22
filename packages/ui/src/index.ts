@@ -22,3 +22,12 @@ export { ScrollReveal } from './utilities/ScrollReveal';
 export * from './components/Accordion';
 
 export * from './icons';
+
+export {
+  Card2,
+  CardHeader2,
+  CardTitle2,
+  CardDescription2,
+  CardContent2,
+  CardFooter2
+} from './components/Card2';
