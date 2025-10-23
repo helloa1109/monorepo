@@ -7,8 +7,9 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
-import { ThirdSection } from '@/components/ThirdSection';
 import { SponsorBanner } from '@/components/SponsorBanner';
+import { ThirdSection } from '@/components/ThirdSection';
+
 
 
 export default function Home() {
