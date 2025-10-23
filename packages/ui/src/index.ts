@@ -21,3 +21,20 @@ export { ScrollReveal } from './utilities/ScrollReveal';
 export * from './components/Accordion';
 
 export * from './icons';
+
+// Typography Components
+export {
+  H1,
+  H2,
+  H3,
+  H4,
+  P,
+  Blockquote,
+  Ul,
+  Ol,
+  InlineCode,
+  Lead,
+  Large,
+  Small,
+  Muted,
+} from './components/Typograpy';

@@ -1,6 +1,3 @@
-// File: apps/web/src/components/SecondSection.tsx
-// Updated card colors for light theme and orange primary
-
 import { Card, CardContent, ScrollReveal } from '@mono/ui';
 
 const features = [
