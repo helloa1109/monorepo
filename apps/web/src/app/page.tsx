@@ -32,7 +32,7 @@ export default function Home() {
 
       {/* 메인 콘텐츠 */}
       <main
-        className={`min-h-screen bg-black text-white overflow-x-hidden transition-opacity duration-1000 ${
+        className={`min-h-screen bg-white text-black overflow-x-hidden transition-opacity duration-1000 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >

@@ -21,13 +21,13 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] bg-black flex flex-col items-center justify-center transition-opacity duration-800 ${
+      className={`fixed inset-0 z-[100] bg-white flex flex-col items-center justify-center transition-opacity duration-800 ${
         isExiting ? 'opacity-0' : 'opacity-100'
       }`}
     >
       {/* Logo/Text */}
       <div className="mb-8 animate-in fade-in zoom-in-95 duration-700">
-        <h1 className="text-7xl md:text-9xl font-black text-white tracking-tighter">
+        <h1 className="text-7xl md:text-9xl font-black text-black tracking-tighter">
           WELCOME
         </h1>
       </div>
