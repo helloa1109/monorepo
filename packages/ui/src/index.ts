@@ -38,3 +38,9 @@ export {
   Small,
   Muted,
 } from './components/Typograpy';
+
+// svg
+export * from './components/assets/svgs';
+
+// Theme
+export { ThemeToggle } from './components/ThemeToggle';

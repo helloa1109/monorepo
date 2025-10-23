@@ -7,7 +7,7 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
-import { SponsorBanner } from '@/components/SponsorBanner';
+// import { SponsorBanner } from '@/components/SponsorBanner';
 import { ThirdSection } from '@/components/ThirdSection';
 
 export default function Home() {
@@ -34,7 +34,7 @@ export default function Home() {
 
       {/* 메인 콘텐츠 */}
       <main
-        className={`min-h-screen bg-white text-black overflow-x-hidden transition-opacity duration-1000 ${
+        className={`min-h-screen bg-background text-foreground overflow-x-hidden transition-opacity duration-1000 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
       >
@@ -42,7 +42,8 @@ export default function Home() {
         <HeroSection />
         <SecondSection />
         <ThirdSection />
-        <SponsorBanner/>
+        {/* 필요할경우: SponsorBanner 추가 */}
+        {/* <SponsorBanner/> */}
         <FAQSection />
       </main>
     </>

@@ -1,13 +1,13 @@
 'use client';
 
-import { Button, ArrowRight, Menu, X, cn } from '@mono/ui';
+import { Button, ArrowRight, Menu, X, cn, ThemeToggle } from '@mono/ui';
 import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 
 const menuItems = [
-  { name: 'Home', href: '#home' }, // #home 등 ID 설정 필요
-  { name: 'Why Me?', href: '#why-me' }, // 각 섹션에 ID 추가 필요
-  { name: 'Routine', href: '#routine' }, // 각 섹션에 ID 추가 필요
+  { name: 'Home', href: '#home' }, 
+  { name: 'Why Me?', href: '#why-me' },
+  { name: 'Routine', href: '#routine' },
   { name: 'FAQ', href: '#faq' },
 ];
 
@@ -52,10 +52,7 @@ export function Header() {
       >
         {/* 로고 */}
         <Link href="/" className="flex items-center gap-2 z-50"> 
-          <div className="w-10 h-10 rounded-full border-2 border-foreground flex items-center justify-center">
-            <span className="text-lg font-bold text-foreground">P</span>
-          </div>
-          <span className="font-semibold text-foreground">PLODE</span>
+          <span className="font-semibold text-foreground">SH</span>
         </Link>
 
         {/* 데스크탑 네비게이션 */}
@@ -65,11 +62,12 @@ export function Header() {
               key={item.name}
               href={item.href}
               className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-              onClick={(e) => handleMenuClick(e, item.href)} // 스크롤 함수 사용
+              onClick={(e) => handleMenuClick(e, item.href)} 
             >
               {item.name}
             </Link>
           ))}
+          <ThemeToggle />
           <Button
             variant="outline"
             size="sm"
@@ -80,7 +78,8 @@ export function Header() {
         </nav>
 
         {/* 모바일 햄버거 버튼 */}
-        <div className="md:hidden z-50"> {/* 모바일 메뉴 위에 보이도록 z-index 추가 */}
+        <div className="md:hidden z-50 flex items-center gap-2"> {/* 모바일 메뉴 위에 보이도록 z-index 추가 */}
+          <ThemeToggle />
           <Button
             variant="ghost"
             size="icon"
