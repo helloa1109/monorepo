@@ -35,7 +35,7 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
       {/* Spinner */}
       <div className="relative w-16 h-16 animate-in fade-in zoom-in-95 duration-700 delay-300">
         <div className="absolute inset-0 border-4 border-zinc-800 rounded-full" />
-        <div className="absolute inset-0 border-4 border-transparent border-t-cyan-400 rounded-full animate-spin" />
+        <div className="absolute inset-0 border-4 border-transparent border-t-orange-400 rounded-full animate-spin" />
       </div>
 
       {/* Subtitle */}

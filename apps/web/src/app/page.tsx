@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from 'react';
 
+import { FAQSection } from '@/components/FAQSection';
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
 import { ThirdSection } from '@/components/ThirdSection';
+
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
@@ -40,6 +42,7 @@ export default function Home() {
         <HeroSection />
         <SecondSection />
         <ThirdSection />
+        <FAQSection />
       </main>
     </>
   );
