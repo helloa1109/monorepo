@@ -2,7 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, ScrollRev
 
 export function FAQSection() {
   return (
-    <section className="py-24 px-6 max-w-5xl mx-auto">
+    <section id="faq" className="py-24 px-6 max-w-5xl mx-auto">
         <ScrollReveal>
           <h2 className="text-4xl md:text-6xl font-bold mb-20 text-center">자주 묻는 질문</h2>
         </ScrollReveal>

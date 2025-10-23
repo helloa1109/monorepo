@@ -20,7 +20,7 @@ export { ScrollReveal } from './utilities/ScrollReveal';
 // Accordion Components
 export * from './components/Accordion';
 
-export * from './icons';
+export { ChevronDown, ArrowRight, Menu, X } from './icons';
 
 // Typography Components
 export {

@@ -4,7 +4,7 @@ import { Button, ChevronDown, H1, P } from '@mono/ui';
 
 export function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
+    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden bg-background">
       <div className="absolute inset-0 z-0 opacity-70">
         <div className="absolute top-[20%] left-[15%] w-48 h-48 rounded-full bg-orange-500/20 blur-[100px] animate-pulse" />
         <div className="absolute top-[30%] right-[20%] w-56 h-56 rounded-full bg-amber-500/15 blur-[120px] animate-pulse" style={{ animationDelay: '1s' }} />

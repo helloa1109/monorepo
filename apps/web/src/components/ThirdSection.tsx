@@ -13,7 +13,7 @@ const squirrelRoutine = [
 
 export function ThirdSection() {
   return (
-    <section className="py-24 px-6 max-w-7xl mx-auto">
+    <section id="routine" className="py-24 px-6 max-w-7xl mx-auto">
       <ScrollReveal>
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
