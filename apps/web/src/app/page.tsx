@@ -8,6 +8,7 @@ import { HeroSection } from '@/components/HeroSection';
 import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
 import { ThirdSection } from '@/components/ThirdSection';
+import { SponsorBanner } from '@/components/SponsorBanner';
 
 
 export default function Home() {
@@ -42,6 +43,7 @@ export default function Home() {
         <HeroSection />
         <SecondSection />
         <ThirdSection />
+        <SponsorBanner/>
         <FAQSection />
       </main>
     </>

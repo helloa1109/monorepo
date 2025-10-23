@@ -20,10 +20,10 @@ export function FAQSection() {
             <ScrollReveal key={index} delay={0.05 * index}>
               <AccordionItem
                 value={`item-${index}`}
-                className="bg-#9E9E9E border-zinc-800 rounded-xl px-7 py-1 data-[state=open]:border-cyan-400/60 transition-all duration-300"
+                className="bg-#9E9E9E rounded-xl px-7 py-1 transition-all duration-300"
               >
                 <AccordionTrigger className="hover:no-underline text-left py-6 text-base md:text-lg">
-                  <span className="text-cyan-400 mr-3 font-bold">Q</span>
+                  <span className="text-gray-400 mr-3 font-bold">Q</span>
                   {item.q}
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-400 pb-6 pl-7 text-base">

@@ -87,3 +87,9 @@
     box-shadow: 0 0 20px hsla(var(--primary) / 0.3); /* Use primary color for glow */
   }
 }
+
+@layer utilities {
+  .pause-animation:hover {
+    animation-play-state: paused;
+  }
+}
