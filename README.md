@@ -1,4 +1,4 @@
-# Mono - Monorepo Project
+# Mono - Monorepo 
 
 A modern monorepo project built with Next.js, TypeScript, Tailwind CSS, and Turborepo.
 
