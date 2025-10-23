@@ -15,15 +15,15 @@ export function HeroSection() {
 
       <div className="relative z-20 text-center px-6 text-foreground">
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-black mb-8 leading-tight tracking-tight ">
-          <span className="block">TS+NEXT</span>
-          <span className="block">TEXT WRITE</span>
+          <span className="block">PLODE</span>
+          <span className="block">IT Community</span>
           <span className="block text-base md:text-lg font-normal mt-6 tracking-widest text-muted-foreground">HELLO WORLD</span>
         </h1>
         <Button
           variant="outline"
           className="rounded-full border-2 border-border hover:border-primary hover:bg-primary/10 text-foreground px-10 py-7 mt-12 text-base transition-all duration-300"
         >
-          sang hyuk
+          INVITE LINK
         </Button>
         <div className="mt-24">
           <ChevronDown className="w-8 h-8 mx-auto animate-bounce text-muted-foreground" />

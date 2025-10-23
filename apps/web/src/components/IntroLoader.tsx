@@ -40,7 +40,7 @@ export function IntroLoader({ onComplete }: IntroLoaderProps) {
 
       {/* Subtitle */}
       <p className="mt-8 text-sm md:text-base text-gray-500 tracking-widest animate-in fade-in slide-in-from-bottom-2 duration-700 delay-500">
-        LOADING.. SANGHYUK
+        LOADING..
       </p>
     </div>
   );

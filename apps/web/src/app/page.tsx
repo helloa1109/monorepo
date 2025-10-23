@@ -10,8 +10,6 @@ import { SecondSection } from '@/components/SecondSection';
 import { SponsorBanner } from '@/components/SponsorBanner';
 import { ThirdSection } from '@/components/ThirdSection';
 
-
-
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
   const [isLoaded, setIsLoaded] = useState(false);
