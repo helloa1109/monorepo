@@ -7,16 +7,14 @@ interface Sponsor {
   logo?: string;
 }
 
-// 스폰서 데이터
 const sponsors: Sponsor[] = [
-    { name: 'Google', logo: '/assets/google.png' },
-    { name: 'Microsoft', logo: '/assets/google.png' },
-    { name: 'Amazon', logo: '/assets/google.png' },
-    { name: 'Meta', logo: '/assets/google.png' },
-    { name: 'Apple', logo: '/assets/google.png' },
-    { name: 'Tesla', logo: '/assets/google.png' },
-    { name: 'Netflix', logo: '/assets/google.png' },
-    { name: 'Samsung', logo: '/assets/google.png' },
+    { name: 'Google', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg' },
+    { name: 'Microsoft', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg' },
+    { name: 'Amazon', logo: 'https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg' },
+    { name: 'Apple', logo: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg' },
+    { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bd/Tesla_Motors.svg' },
+    { name: 'Netflix', logo: 'https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg' },
+    { name: 'Samsung', logo: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg' },
   ];
 
 export function SponsorBanner() {
