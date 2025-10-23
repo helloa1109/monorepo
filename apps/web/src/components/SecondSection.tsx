@@ -1,5 +1,6 @@
 import { Card, CardContent, ScrollReveal } from '@mono/ui';
 
+
 const features = [
     {
       "badge": "한국",
