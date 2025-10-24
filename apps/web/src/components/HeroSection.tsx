@@ -17,8 +17,8 @@ export function HeroSection() {
       {/* 중앙 컨텐츠 */}
       <div className="relative z-20 text-center px-6 text-foreground">
         <H1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight tracking-tight ">
-          <span className="block">PORTFOLIO</span>
-          <span className="block">Sang Hyuk Lee</span>
+          <span className="block">TEXT WRITE</span>
+          <span className="block">HELLO</span>
           <Lead className="block text-lg md:text-xl font-medium mt-6 tracking-wide text-muted-foreground [&:not(:first-child)]:mt-6">
             HELLO WORLD
           </Lead>

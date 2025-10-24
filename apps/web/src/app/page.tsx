@@ -7,6 +7,7 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { IntroLoader } from '@/components/IntroLoader';
 import { SecondSection } from '@/components/SecondSection';
+// 필요할 경우 주석해제
 // import { SponsorBanner } from '@/components/SponsorBanner';
 import { ThirdSection } from '@/components/ThirdSection';
 
